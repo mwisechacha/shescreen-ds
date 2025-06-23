@@ -33,8 +33,8 @@ CLUSTER_INFO = {
 
 
 
-@app.post("/predict")
-def predict(data: InferenceInput):
+@app.post("/risk_predict")
+def risk_prediction(data: InferenceInput):
     smoking_status_map = {
         "No": 0,
         "Yes": 1,
@@ -78,14 +78,14 @@ def predict(data: InferenceInput):
 
     # Prepare input features
     X = np.array([[
-        smoking_status_num,         # use numeric, not string
+        smoking_status_num,        
         stds_history_num, 
         risk_score,
         smokes_and_has_stds,
         sexual_partner_and_years_active,
         log_sexual_partners,
         years_sexually_active_squared,
-        age_group_25_35,  # one-hot encoded
+        age_group_25_35,
         age_group_36_50,
         age_group_50_plus,
         age_group_lt25
