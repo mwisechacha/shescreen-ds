@@ -10,6 +10,8 @@ envs
 */.ipynb_checkpoints/*
 
 # Model files
+/models
+/pipelines
 *.pkl
 # *.joblib
 

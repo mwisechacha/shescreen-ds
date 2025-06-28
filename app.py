@@ -7,10 +7,10 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 import joblib
 
 # load model
-model = joblib.load("cervical_cancer_kmeans_model.pkl")
-imputer = joblib.load("cervical_cancer_imputer.pkl")
-minmax_scaler = joblib.load("cervical_cancer_minmax_scaler.pkl")
-std_scaler = joblib.load("cervical_cancer_std_scaler.pkl")
+model = joblib.load("models/cervical_cancer_kmeans_model.pkl")
+imputer = joblib.load("pipelines/cervical_cancer_imputer.pkl")
+minmax_scaler = joblib.load("pipelines/cervical_cancer_minmax_scaler.pkl")
+std_scaler = joblib.load("pipelines/cervical_cancer_std_scaler.pkl")
 
 app = FastAPI()
 
