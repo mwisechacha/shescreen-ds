@@ -43,6 +43,7 @@ def risk_prediction(data: InferenceInput):
         "No": 0,
         "Yes": 1,
     }
+    
     smoking_status_num = smoking_status_map.get(data.smoking_status.strip().capitalize(), 0)
     stds_history_num = stds_map.get(data.stds_history.strip().capitalize(), 0)
 

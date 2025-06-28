@@ -4,6 +4,8 @@ envs
 # DS_Store
 *.DS_Store
 
+/venv
+
 # Jupyter checkpoints
 *.ipynb_checkpoints
 .ipynb_checkpoints
