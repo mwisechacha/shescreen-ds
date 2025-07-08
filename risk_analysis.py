@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 import joblib
 
-# Load the improved models with selected features
+# Load models and pipelines
 kmeans_selected = joblib.load("models/cervical_cancer_kmeans_selected_model.pkl")
 selector = joblib.load("pipelines/cervical_cancer_feature_selector.pkl")
 full_risk_pipeline = joblib.load("pipelines/cervical_cancer_risk_pipeline.pkl")
@@ -27,7 +27,7 @@ class InferenceInput(BaseModel):
     stds_history: str
     hpv_test_result: str 
 
-# Define risk categories based on probability thresholds
+# probability thresholds
 def get_risk_category(risk_probability, hpv_positive):
     """Determine risk category based on probability and HPV status"""
     if hpv_positive == 1:
